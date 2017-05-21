@@ -1,5 +1,5 @@
 options(digits=15)
-pair <- read.delim("/home/qzo/Dropbox (ORNL)/project/virus_tree/tree/kmer15cor.txt", header=F,stringsAsFactors=F)
+pair <- read.delim("~/project/virus_tree/tree/kmer15cor.txt", header=F,stringsAsFactors=F)
 order = pair[order(pair[,1],pair[,2],decreasing=F),]
 head(order)
 
@@ -30,11 +30,11 @@ for (i in 1:3905){
 vir15 <- nj(as.dist(m))
 
 
-write.tree(vir15,"/home/qzo/Dropbox (ORNL)/project/virus_tree/tree/kmer15.newick")
+write.tree(vir15,"~/project/virus_tree/tree/kmer15.newick")
 
 
 
-bacteria <- read.table("~/Dropbox (ORNL)/project/virus_tree/host/bacteria.csv", quote="\"")
+bacteria <- read.table("~)/project/virus_tree/host/bacteria.csv", quote="\"")
 
 index<-rep(NA,1375)
 
@@ -70,7 +70,7 @@ write.tree(protree,"/home/qzo/Dropbox (ORNL)/project/virus_tree/new_host/prok_km
 
 
 
-ds_col <- read.delim("~/Dropbox (ORNL)/project/virus_tree/dsDNA_list.txt", header=F)
+ds_col <- read.delim("~/project/virus_tree/dsDNA_list.txt", header=F)
 
 
 index<-rep(NA,1826)
@@ -85,5 +85,5 @@ ds<-m[index,index]
 dstree<-nj(as.dist(ds))
 
 
-write.tree(dstree,"/home/qzo/Dropbox (ORNL)/project/virus_tree/dstree/dskmer15.newick")
+write.tree(dstree,"~/project/virus_tree/dstree/dskmer15.newick")
 
