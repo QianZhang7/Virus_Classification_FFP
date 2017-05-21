@@ -13,5 +13,5 @@ Real-time analytics for large-scale classification of viruses using Feature Freq
 4. FFP python file
 5. Tree distance calculation in R: RF_dist.R
 
--Please cite: 
--Qian Zhang, Se-Ran Jun, Michael Leuze, David Ussery, Intawat Nookaew. Viral phylogenomics using an alignment-free method: A three-step approach to determine optimal length of k-mer. Scientific reports 7, 40712.https://www.nature.com/articles/srep40712  
+Please cite: 
+Qian Zhang, Se-Ran Jun, Michael Leuze, David Ussery, Intawat Nookaew. Viral phylogenomics using an alignment-free method: A three-step approach to determine optimal length of k-mer. Scientific reports 7, 40712.https://www.nature.com/articles/srep40712  
