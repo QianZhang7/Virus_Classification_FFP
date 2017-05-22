@@ -1,5 +1,5 @@
 # Virus_Classification_FFP
-Real-time analytics for large-scale classification of viruses using Feature Frequency Profile method
+Real-time analytics for large-scale clustering of viruses using Feature Frequency Profile method
 
 1. lists for 3905 viruses:
 
