@@ -1,17 +1,15 @@
-import sys, warnings, os
+import sys
 sys.path.append('/shared/apps/python/python-2.7.6/lib/python2.7/')
-import numpy
-import math
+import numpy as np
 
 #Relative Entropy Calculation Function rec()#
 def rec(folder, filename, lower, upper):
-    kmerdict = {}
-    countsum = []
     files = []
     for i in range((int(lower)-2), (int(upper) +1)):
         files.append(folder + "kmer"+ str(i) +"/" + filename)
 
     value = []
+    countsum = []
     kmerdict = {}
     for x, item in enumerate(files):
         kmer = []
@@ -35,7 +33,7 @@ def rec(folder, filename, lower, upper):
                 fur.append(int(kmerdict[(x-1)][k[:-1]])/(float(countsum[x-1])))
                 fd.append(int(kmerdict[(x-2)][k[1:-1]])/(float(countsum[x-2])))
                 fihat = list(numpy.array(ful)*numpy.array(fur)/(numpy.array(fd)))
-            re = sum(_p* math.log(_p / _m) for _p, _m in zip(fi, fihat))/math.log(2)
+            re = sum(_p* np.log(_p / _m) for _p, _m in zip(fi, fihat))/np.log(2)
             value.append(re)
     return value
 
