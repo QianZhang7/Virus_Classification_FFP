@@ -48,7 +48,7 @@ def jsd(fileone,filetwo):
     p = list(np.array(fp)/(float(sum(fp))))
     q = list(np.array(fq)/(float(sum(fq))))
     m=(np.array(p)+np.array(q))/2
-    value = (0.5 * sum(_p * np.log(_p / _m) for _p, _m in zip(p, m) if _p != 0) +
+    value = (0.5 * sum(_p * np.log(_p / _m) for _p, _m in zip(p, m) if _p != 0) + \
              0.5 * sum(_q * np.log(_q / _m) for _q, _m in zip(q, m) if _q != 0))/np.log(2)
     return value
 
