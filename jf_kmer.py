@@ -9,9 +9,8 @@ import sys, warnings, os
 
 sys.path.append('/shared/apps/python/python-2.7.6/lib/python2.7/')
 sys.path.append('/shared/apps/python/python-2.7.9/lib/python2.7/site-packages')
-import numpy
-import math 
-import multiprocessing
+import numpy as np 
+
 
 
 #JS Divergence calculation function jsd()#
@@ -46,10 +45,11 @@ def jsd(fileone,filetwo):
             fq.append(int(dict2[k]))
         else:
             fq.append(0)
-    p = list(numpy.array(fp)/(float(sum(fp))))
-    q = list(numpy.array(fq)/(float(sum(fq))))
-    m=(numpy.array(p)+numpy.array(q))/2
-    value = (0.5 * sum(_p * math.log(_p / _m) for _p, _m in zip(p, m) if _p != 0) + 0.5 * sum(_q * math.log(_q / _m) for _q, _m in zip(q, m) if _q != 0))/math.log(2)
+    p = list(np.array(fp)/(float(sum(fp))))
+    q = list(np.array(fq)/(float(sum(fq))))
+    m=(np.array(p)+np.array(q))/2
+    value = (0.5 * sum(_p * np.log(_p / _m) for _p, _m in zip(p, m) if _p != 0) +
+             0.5 * sum(_q * np.log(_q / _m) for _q, _m in zip(q, m) if _q != 0))/np.log(2)
     return value
 
 
