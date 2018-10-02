@@ -7,7 +7,7 @@ def rec(folder, filename, lower, upper):
     files = []
     for i in range((int(lower)-2), (int(upper) +1)):
         files.append(folder + "kmer"+ str(i) +"/" + filename)
-
+    #initialize values
     value = []
     countsum = []
     kmerdict = {}
